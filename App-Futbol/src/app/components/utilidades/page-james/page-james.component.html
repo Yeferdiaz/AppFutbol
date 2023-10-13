@@ -1,19 +1,21 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
-        <div class="card" *ngFor="let futbol of futbol ">
-            <img class="card-img-top" [src]="futbol.img">
-            <div class="card-body">
-                <h5>{{futbol.nombre}}</h5>
-                <p>{{futbol.bio}}</p>
-                <p>{{futbol.img}}</p>
-                <p>{{futbol.nacimiento}}</p>
-                <p>{{futbol.seleccion}}</p>
-                <p>{{futbol.equipo}}</p>
+        <div class="card" *ngFor="let futbol of futbol">
+            <div *ngIf="futbol.nombre=='James Rodriguez'">
+                <img class=" card-img-top " [src]="futbol.img">
+                <button class="btn btn-primary" (click)="visible=!visible">Mostra Solo Informacion</button>
+                <div class="card-body" *ngIf="visible">
+                    <h5>{{futbol.nombre}}</h5>
+                    <p>{{futbol.bio}}</p>
+                    <p>{{futbol.nacimiento}}</p>
+                    <p>{{futbol.seleccion}}</p>
+                    <p>{{futbol.equipo}}</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<a [routerLink]="['../pagemesi']">
-    <button id="button-regresar">Regresar</button>
-</a>
+<div>
+    <button class="btn btn-primary" [routerLink]="['../home']">Regresar</button>
+</div>

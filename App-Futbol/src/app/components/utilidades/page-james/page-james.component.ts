@@ -9,6 +9,7 @@ import { FutbolService, Futbol1 } from '../../service/futbol-DiazArias.service';
 export class PageJamesComponent {
 
   futbol:Futbol1[]=[];
+  visible:boolean=false;
 
   constructor (private _futbolService:FutbolService){}
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Futbol1, FutbolService } from '../../service/futbol-DiazArias.service';
 
 @Component({
   selector: 'app-page-mesi',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class PageMesiComponent {
 
+  futbol:Futbol1[]=[];
+  
+  constructor (private _futbolService:FutbolService){}
+
+  ngOnInit(): void{
+
+    this.futbol=this._futbolService.getFutbol();
+    console.log(this.futbol)
+}
 }

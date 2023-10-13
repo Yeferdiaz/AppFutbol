@@ -1,22 +1,19 @@
-<br>
-<h2 style="text-align: center;">Infografía Jugadores</h2>
-<br>
-
-<div style="margin: auto !important; padding-right: 30%; padding-left: 30%;">
-    <div class="row">
-        <div class="col-lg-4">
-
-        </div>
-        <div class="col-lg-4">
-            <img src="../../../../assets/img/ronaldo.jpg" alt="" height="200">
-
-            <h3 style="text-align: center;">Ronaldo</h3>
-            <p>nombre: "Cristiano Ronaldo", bio: "futbolista portugués que juega como delantero en el Manchester United Football Club de la Premier League de Inglaterra y en la selección de Portugal, de la cual es su capitán y máximo goleador histórico",
-                img: "assets/img/ronaldo.jpg", nacimiento: "5 de febrero de 1985", seleccion:"Portugal" equipo:"Manchester UNITED"</p>
-        </div>
-        <div class="col-lg-4">
-
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card" *ngFor="let futbol of futbol">
+            <div *ngIf="futbol.nombre=='Cristiano Ronaldo'">
+                <img class=" card-img-top " [src]="futbol.img">
+                <div class="card-body">
+                    <h5>{{futbol.nombre}}</h5>
+                    <p>{{futbol.bio}}</p>
+                    <p>{{futbol.nacimiento}}</p>
+                    <p>{{futbol.seleccion}}</p>
+                    <p>{{futbol.equipo}}</p>
+                </div>
+            </div>
         </div>
     </div>
-
+</div>
+<div>
+    <button class="btn btn-primary" [routerLink]="['../home']">Regresar</button>
 </div>

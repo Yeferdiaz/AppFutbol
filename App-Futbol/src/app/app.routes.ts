@@ -11,7 +11,8 @@ const APP_ROUTES: Routes =[
     {path: 'pagemesi', component:PageMesiComponent},
     {path: 'pagejames', component: PageJamesComponent},
     {path: 'pageronaldo', component:PageRonaldoComponent},
-    { path: '**', pathMatch: 'full', redirectTo: 'home' },
+    {path: '**', pathMatch: 'full', redirectTo: 'home' },
+    {path: '', redirectTo:'home'}
 
 ] 
 ;
